@@ -21,7 +21,7 @@ class LeilaoTest extends TestCase
         $this->assertEquals(1, count($leilao->getLances()));
         $this->assertEquals(2000, $leilao->getLances()[0]->getValor(), 0.00001);
     }
-
+    
     public function testComVariosLances()
     {
         $leilao = new Leilao("Macbook Pro 15");

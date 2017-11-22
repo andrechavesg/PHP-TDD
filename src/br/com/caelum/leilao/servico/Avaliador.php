@@ -1,9 +1,9 @@
 <?php
 namespace src\br\com\caelum\leilao\servico;
 
-use src\br\com\caelum\leilao\dominio\Leilao;
 use RuntimeException;
 use src\br\com\caelum\leilao\dominio\Lance;
+use src\br\com\caelum\leilao\dominio\Leilao;
 
 class Avaliador
 {
@@ -31,8 +31,7 @@ class Avaliador
         $this->tresMaiores($leilao);
     }
     
-    private function tresMaiores(Leilao $leilao)
-    {
+    private function tresMaiores(Leilao $leilao) {
         $this->maiores = $leilao->getLances();
         
         usort($this->maiores, function(Lance $o1, Lance $o2) {
@@ -44,17 +43,16 @@ class Avaliador
             $this->maiores = array_slice($this->maiores,0, count($this->maiores) > 3 ? 3 : count($this->maiores));
     }
     
-    public function getTresMaiores()
-    {
+    public function getTresMaiores() : array {
         return $this->maiores;
     }
     
-    public function getMaiorLance()
+    public function getMaiorLance(): float
     {
         return $this->maiorDeTodos;
     }
     
-    public function getMenorLance()
+    public function getMenorLance(): float
     {
         return $this->menorDeTodos;
     }

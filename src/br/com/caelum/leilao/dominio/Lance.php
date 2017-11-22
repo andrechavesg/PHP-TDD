@@ -18,7 +18,7 @@ class Lance
      *
      * @return Usuario
      */
-    public function getUsuario()
+    public function getUsuario(): Usuario
     {
         return $this->usuario;
     }

@@ -5,6 +5,7 @@ use DateTime;
 
 class Leilao
 {
+
     private $descricao;
 
     private $lances = array();
