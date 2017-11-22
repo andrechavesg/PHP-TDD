@@ -14,7 +14,6 @@ class EncerradorDeLeilaoTest extends TestCase
     
     public function testDeveEncerrarLeiloesQueComecaramUmaSemanaAtras()
     {
-        
         $antiga = new DateTime('1999-01-20');
         
         $leilao1 = new CriadorDeLeilao();

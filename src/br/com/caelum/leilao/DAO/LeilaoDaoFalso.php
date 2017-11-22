@@ -1,7 +1,7 @@
 <?php
 namespace src\br\com\caelum\leilao\DAO;
 
-use src\br\com\caelum\leilao\dominio\Leilao;
+use br\com\caelum\leilao\dominio\Leilao;
 
 class LeilaoDaoFalso implements RepositorioDeLeiloes
 {
@@ -13,7 +13,7 @@ class LeilaoDaoFalso implements RepositorioDeLeiloes
         static::$leiloes[] = $leilao;
     }
 
-    public function encerrados(): array
+    public function encerrados()
     {
         $filtrados = array();
         foreach (static::$leiloes as $leilao) {
@@ -23,7 +23,7 @@ class LeilaoDaoFalso implements RepositorioDeLeiloes
         return $filtrados;
     }
 
-    public function correntes(): array
+    public function correntes()
     {
         $filtrados = array();
         foreach (static::$leiloes as $leilao) {

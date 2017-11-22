@@ -10,9 +10,6 @@ use src\br\com\caelum\leilao\dominio\Usuario;
 use src\br\com\caelum\leilao\servico\Avaliador;
 use src\br\com\caelum\leilao\servico\CriadorDeLeilao;
 
-/**
- * test case.
- */
 class AvaliadorTest extends TestCase
 {
 
