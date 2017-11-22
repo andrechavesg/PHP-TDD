@@ -1,7 +1,8 @@
 <?php
 namespace src\br\com\caelum\leilao\DAO;
 
-use src\br\com\caelum\leilao\dominio\Leilao;
+use br\com\caelum\leilao\DAO\RepositorioDeLeiloes;
+use br\com\caelum\leilao\dominio\Leilao;
 
 class LeilaoDaoFalso implements RepositorioDeLeiloes
 {
