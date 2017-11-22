@@ -1,5 +1,5 @@
 <?php
-require_once ("autoload.php");
+require_once ("vendor/autoload.php");
 
 use src\br\com\caelum\leilao\dominio\Leilao;
 use src\br\com\caelum\leilao\dominio\Usuario;

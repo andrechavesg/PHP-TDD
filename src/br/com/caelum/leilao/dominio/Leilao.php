@@ -30,12 +30,12 @@ class Leilao
         }
     }
 
-    private function ultimoLanceDado()
+    private function ultimoLanceDado() : Lance
     {
         return $this->lances[count($this->lances) - 1];
     }
 
-    private function qtdDelancesDo(Usuario $usuario)
+    private function qtdDelancesDo(Usuario $usuario) : int
     {
         $total = 0;
         
@@ -47,7 +47,7 @@ class Leilao
         return $total;
     }
 
-    private function podeDarLance(Usuario $usuario)
+    private function podeDarLance(Usuario $usuario) : bool
     {
         return $this->ultimoLanceDado()->getUsuario() != $usuario 
             && $this->qtdDelancesDo($usuario) < 5;

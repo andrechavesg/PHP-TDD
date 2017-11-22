@@ -1,6 +1,4 @@
 <?php
-namespace test\br\com\caelum\servico;
-
 require_once 'vendor/autoload.php';
 
 use PHPUnit\Framework\TestCase;
