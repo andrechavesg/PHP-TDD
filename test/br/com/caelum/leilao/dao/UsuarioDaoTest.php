@@ -19,8 +19,7 @@ class UsuarioDaoTest extends TestCase
         
         $usuarioDao = new UsuarioDao($pdo);
         
-        $usuarioDao->salvar($usuario);
-        
+        $usuarioDao->salvar($usuario);        
         $usuarioDoBanco = $usuarioDao->porNomeEEmail("João da Silva", "joao@dasilva.com.br");
         
         $this->assertEquals($usuario->getNome(), $usuarioDoBanco->getNome());

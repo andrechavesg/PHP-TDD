@@ -1,7 +1,6 @@
 <?php
-require_once("vendor/autoload.php");
+require_once("vedor/autoload.php");
 use src\br\com\caelum\leilao\Factory\ConnectionFactory;
-
 
 function criaDatabase(){
     try {
