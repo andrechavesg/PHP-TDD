@@ -13,19 +13,11 @@ class Leilao
         $this->descricao = $descricao;
     }
 
-    /**
-     *
-     * @return mixed
-     */
     public function getDescricao(): string
     {
         return $this->descricao;
     }
 
-    /**
-     *
-     * @return multitype:
-     */
     public function getLances(): array
     {
         return $this->lances;
@@ -33,6 +25,31 @@ class Leilao
 
     public function propoe(Lance $lance)
     {
-        $this->lances[] = $lance;
+        if (empty($this->lances) || $this->podeDarLance($lance->getUsuario())) {
+            $this->lances[] = $lance;
+        }
+    }
+
+    private function ultimoLanceDado()
+    {
+        return $this->lances[count($this->lances) - 1];
+    }
+
+    private function qtdDelancesDo(Usuario $usuario)
+    {
+        $total = 0;
+        
+        foreach ($this->lances as $l) {
+            if ($l->getUsuario() == $usuario)
+                $total ++;
+        }
+        
+        return $total;
+    }
+
+    private function podeDarLance(Usuario $usuario)
+    {
+        return $this->ultimoLanceDado()->getUsuario() != $usuario 
+            && $this->qtdDelancesDo($usuario) < 5;
     }
 }

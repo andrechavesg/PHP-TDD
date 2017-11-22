@@ -1,15 +1,10 @@
 <?php
-namespace src\br\com\caelum\leilao;
+require_once ("autoload.php");
 
-require_once ("src/br/com/caelum/leilao/dominio/Lance.php");
-require_once ("src/br/com/caelum/leilao/dominio/Leilao.php");
-require_once ("src/br/com/caelum/leilao/dominio/Usuario.php");
-require_once ("src/br/com/caelum/leilao/servico/Avaliador.php");
-
-use src\br\com\caelum\leilao\servico\Avaliador;
 use src\br\com\caelum\leilao\dominio\Lance;
 use src\br\com\caelum\leilao\dominio\Leilao;
 use src\br\com\caelum\leilao\dominio\Usuario;
+use src\br\com\caelum\leilao\servico\Avaliador;
 
 $joao = new Usuario("Joao");
 $jose = new Usuario("José");
@@ -24,5 +19,4 @@ $leilao->propoe(new Lance($maria, 250.0));
 $leiloeiro = new Avaliador();
 $leiloeiro->avalia($leilao);
 
-echo $leiloeiro->getMaiorLance() . "\n";
-echo $leiloeiro->getMenorLance();
+echo $leiloeiro->getMaiorLance();

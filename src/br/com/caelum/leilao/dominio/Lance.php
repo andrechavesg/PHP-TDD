@@ -1,6 +1,8 @@
 <?php
 namespace src\br\com\caelum\leilao\dominio;
 
+use src\br\com\caelum\leilao\dominio\Usuario;
+
 class Lance
 {
 
@@ -18,7 +20,7 @@ class Lance
      *
      * @return Usuario
      */
-    public function getUsuario(): Usuario
+    public function getUsuario()
     {
         return $this->usuario;
     }
@@ -27,7 +29,7 @@ class Lance
      *
      * @return float
      */
-    public function getValor(): float
+    public function getValor()
     {
         return $this->valor;
     }

@@ -1,10 +1,10 @@
 <?php
 require_once ("autoload.php");
 
-use br\com\caelum\leilao\dominio\Avaliador;
-use br\com\caelum\leilao\dominio\Lance;
-use br\com\caelum\leilao\dominio\Leilao;
-use br\com\caelum\leilao\dominio\Usuario;
+use src\br\com\caelum\leilao\dominio\Lance;
+use src\br\com\caelum\leilao\dominio\Leilao;
+use src\br\com\caelum\leilao\dominio\Usuario;
+use src\br\com\caelum\leilao\servico\Avaliador;
 
 $joao = new Usuario("Joao");
 $leilao = new Leilao("Playstation 3 Novo");
