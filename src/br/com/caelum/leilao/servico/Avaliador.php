@@ -43,16 +43,17 @@ class Avaliador
             $this->maiores = array_slice($this->maiores,0, count($this->maiores) > 3 ? 3 : count($this->maiores));
     }
     
-    public function getTresMaiores() : array {
+    public function getTresMaiores()
+    {
         return $this->maiores;
     }
     
-    public function getMaiorLance(): float
+    public function getMaiorLance()
     {
         return $this->maiorDeTodos;
     }
     
-    public function getMenorLance(): float
+    public function getMenorLance()
     {
         return $this->menorDeTodos;
     }

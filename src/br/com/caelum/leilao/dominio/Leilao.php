@@ -1,6 +1,8 @@
 <?php
 namespace src\br\com\caelum\leilao\dominio;
 
+use DateTime;
+
 class Leilao
 {
 
@@ -8,9 +10,15 @@ class Leilao
 
     private $lances = array();
 
+    private $data;
+
+    private $encerrado;
+
     public function __construct(string $descricao)
     {
         $this->descricao = $descricao;
+        $this->data = new DateTime();
+        $this->encerrado = false;
     }
 
     public function getDescricao(): string
@@ -30,12 +38,32 @@ class Leilao
         }
     }
 
-    private function ultimoLanceDado() : Lance
+    public function getData() : DateTime
+    {
+        return $this->data;
+    }
+
+    public function setData(DateTime $data)
+    {
+        $this->data = $data;
+    }
+    
+    public function isEncerrado()
+    {
+        return $this->encerrado;
+    }
+
+    public function encerra()
+    {
+        $this->encerrado = true;
+    }
+
+    private function ultimoLanceDado(): Lance
     {
         return $this->lances[count($this->lances) - 1];
     }
 
-    private function qtdDelancesDo(Usuario $usuario) : int
+    private function qtdDelancesDo(Usuario $usuario): int
     {
         $total = 0;
         
@@ -47,9 +75,8 @@ class Leilao
         return $total;
     }
 
-    private function podeDarLance(Usuario $usuario) : bool
+    private function podeDarLance(Usuario $usuario): bool
     {
-        return $this->ultimoLanceDado()->getUsuario() != $usuario 
-            && $this->qtdDelancesDo($usuario) < 5;
+        return $this->ultimoLanceDado()->getUsuario() != $usuario && $this->qtdDelancesDo($usuario) < 5;
     }
 }

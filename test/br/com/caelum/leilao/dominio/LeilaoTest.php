@@ -1,4 +1,6 @@
 <?php
+namespace test\br\com\caelum\leilao\dominio;
+
 require_once 'vendor/autoload.php';
 
 use PHPUnit\Framework\TestCase;

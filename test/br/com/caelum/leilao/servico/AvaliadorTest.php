@@ -1,5 +1,5 @@
 <?php
-namespace test\br\com\caelum\leilao;
+namespace test\br\com\caelum\leilao\servico;
 
 require_once ("vendor/autoload.php");
 
