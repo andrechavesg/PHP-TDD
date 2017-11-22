@@ -12,7 +12,10 @@ class Avaliador
     
     private $valorMedio;
     
-    public function avalia(Leilao $leilao) {
+    private $maiores;
+    
+    public function avalia(Leilao $leilao)
+    {
         $lances = $leilao->getLances();
         
         if (empty($lances)) {
@@ -21,17 +24,30 @@ class Avaliador
             $this->valorMedio = 0;
         } else {
             foreach($lances as $lance) {
-                if($lance->getValor() > $this->maiorDeTodos) {
-                    $this->maiorDeTodos = $lance->getValor();
-                }
-                if($lance->getValor() < $this->menorDeTodos) {
-                    $this->menorDeTodos = $lance->getValor();
-                }
-                
-                $this->valorMedio += $lance->getValor();
+                if($lance->getValor() > $this->maiorDeTodos) $this->maiorDeTodos = $lance->getValor();
+                if ($lance->getValor() < $this->menorDeTodos) $this->menorDeTodos = $lance->getValor();
             }
-            $this->valorMedio = $this->valorMedio/count($lances);
         }
+
+        $this->pegaOsMaioresNo($leilao);
+    }
+    
+    private function pegaOsMaioresNo(Leilao $leilao)
+    {
+        $this->maiores = $leilao->getLances();
+        
+        usort($this->maiores, function($a,$b) {
+            if($a->getValor() < $b->getValor()) return 1;
+            if($a->getValor() > $b->getValor()) return -1;
+            return 0;
+        });
+        
+        $this->maiores = array_slice($this->maiores,0, 3);
+    }
+    
+    public function getTresMaiores()
+    {
+        return $this->maiores;
     }
     
     public function getMaiorLance(): float
@@ -49,3 +65,4 @@ class Avaliador
         return $this->valorMedio;
     }
 }
+   
