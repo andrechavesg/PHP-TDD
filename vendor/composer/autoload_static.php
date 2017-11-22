@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit928a2558da869b6b5b19dcaeec35ac3c
+class ComposerStaticInit2c07d7a17c8a92a0503b438ca992e6cb
 {
     public static $files = array (
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
@@ -192,6 +192,61 @@ class ComposerStaticInit928a2558da869b6b5b19dcaeec35ac3c
         'PHPUnit\\Util\\Type' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Type.php',
         'PHPUnit\\Util\\Xml' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Xml.php',
         'PHPUnit\\Util\\XmlTestListRenderer' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/XmlTestListRenderer.php',
+        'PHPUnit_Extensions_Selenium2TestCase' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Command' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Command.php',
+        'PHPUnit_Extensions_Selenium2TestCase_CommandsHolder' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/CommandsHolder.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Driver' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Driver.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Element' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Element.php',
+        'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_Attribute' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/ElementCommand/Attribute.php',
+        'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_Click' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/ElementCommand/Click.php',
+        'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_Css' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/ElementCommand/Css.php',
+        'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_Equals' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/ElementCommand/Equals.php',
+        'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericAccessor' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/ElementCommand/GenericAccessor.php',
+        'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_GenericPost' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/ElementCommand/GenericPost.php',
+        'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_Rect' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/ElementCommand/Rect.php',
+        'PHPUnit_Extensions_Selenium2TestCase_ElementCommand_Value' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/ElementCommand/Value.php',
+        'PHPUnit_Extensions_Selenium2TestCase_ElementCriteria' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/ElementCriteria.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Element_Accessor' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Element/Accessor.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Element_Select' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Element/Select.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Exception' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Exception.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Keys' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Keys.php',
+        'PHPUnit_Extensions_Selenium2TestCase_KeysHolder' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/KeysHolder.php',
+        'PHPUnit_Extensions_Selenium2TestCase_NoSeleniumException' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/NoSeleniumException.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Response' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Response.php',
+        'PHPUnit_Extensions_Selenium2TestCase_ScreenshotListener' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/ScreenshotListener.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Session' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Session.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_AcceptAlert' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/AcceptAlert.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Active' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/Active.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_AlertText' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/AlertText.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Click' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/Click.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_DismissAlert' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/DismissAlert.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_File' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/File.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Frame' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/Frame.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_GenericAccessor' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/GenericAccessor.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_GenericAttribute' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/GenericAttribute.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Keys' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/Keys.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Location' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/Location.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Log' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/Log.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_MoveTo' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/MoveTo.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Orientation' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/Orientation.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Url' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/Url.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Window' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionCommand/Window.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionStrategy' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionStrategy.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionStrategy_Isolated' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionStrategy/Isolated.php',
+        'PHPUnit_Extensions_Selenium2TestCase_SessionStrategy_Shared' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/SessionStrategy/Shared.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Session_Cookie' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Session/Cookie.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Session_Cookie_Builder' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Session/Cookie/Builder.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Session_Storage' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Session/Storage.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Session_Timeouts' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Session/Timeouts.php',
+        'PHPUnit_Extensions_Selenium2TestCase_StateCommand' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/StateCommand.php',
+        'PHPUnit_Extensions_Selenium2TestCase_URL' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/URL.php',
+        'PHPUnit_Extensions_Selenium2TestCase_WaitUntil' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/WaitUntil.php',
+        'PHPUnit_Extensions_Selenium2TestCase_WebDriverException' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/WebDriverException.php',
+        'PHPUnit_Extensions_Selenium2TestCase_Window' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/Selenium2TestCase/Window.php',
+        'PHPUnit_Extensions_SeleniumBrowserSuite' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/SeleniumBrowserSuite.php',
+        'PHPUnit_Extensions_SeleniumCommon_ExitHandler' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/SeleniumCommon/ExitHandler.php',
+        'PHPUnit_Extensions_SeleniumCommon_RemoteCoverage' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/SeleniumCommon/RemoteCoverage.php',
+        'PHPUnit_Extensions_SeleniumTestSuite' => __DIR__ . '/..' . '/phpunit/phpunit-selenium/PHPUnit/Extensions/SeleniumTestSuite.php',
         'PHPUnit_Framework_MockObject_BadMethodCallException' => __DIR__ . '/..' . '/phpunit/phpunit-mock-objects/src/Exception/BadMethodCallException.php',
         'PHPUnit_Framework_MockObject_Builder_Identity' => __DIR__ . '/..' . '/phpunit/phpunit-mock-objects/src/Builder/Identity.php',
         'PHPUnit_Framework_MockObject_Builder_InvocationMocker' => __DIR__ . '/..' . '/phpunit/phpunit-mock-objects/src/Builder/InvocationMocker.php',
@@ -607,11 +662,11 @@ class ComposerStaticInit928a2558da869b6b5b19dcaeec35ac3c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit928a2558da869b6b5b19dcaeec35ac3c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit928a2558da869b6b5b19dcaeec35ac3c::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit928a2558da869b6b5b19dcaeec35ac3c::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit928a2558da869b6b5b19dcaeec35ac3c::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit928a2558da869b6b5b19dcaeec35ac3c::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2c07d7a17c8a92a0503b438ca992e6cb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2c07d7a17c8a92a0503b438ca992e6cb::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit2c07d7a17c8a92a0503b438ca992e6cb::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit2c07d7a17c8a92a0503b438ca992e6cb::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit2c07d7a17c8a92a0503b438ca992e6cb::$classMap;
 
         }, null, ClassLoader::class);
     }
