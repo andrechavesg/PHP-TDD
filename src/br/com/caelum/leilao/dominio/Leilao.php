@@ -5,7 +5,6 @@ use DateTime;
 
 class Leilao
 {
-
     private $id;
     private $nome;
     private $valorInicial;

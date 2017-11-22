@@ -3,11 +3,9 @@ namespace src\br\com\caelum\leilao\dominio;
 
 class Usuario
 {
-
     private $id;
     private $nome;
     private $email;
-    
 
     public function __construct(string $nome = "", string $email = "",$id = 0)
     {

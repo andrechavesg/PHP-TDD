@@ -24,37 +24,37 @@ class LeilaoBuilder {
         $this->dataAbertura = new DateTime();
     }
     
-    public function comDono(Usuario $dono): LeilaoBuilder
+    public function comDono(Usuario $dono)
     {
         $this->dono = $dono;
         return $this;
     }
     
-    public function comValor(float $valor): LeilaoBuilder
+    public function comValor(float $valor)
     {
         $this->valor = $valor;
         return $this;
     }
     
-    public function comNome(string $nome): LeilaoBuilder
+    public function comNome(string $nome)
     {
         $this->nome = $nome;
         return $this;
     }
     
-    public function usado(): LeilaoBuilder
+    public function usado()
     {
         $this->usado = true;
         return $this;
     }
     
-    public function encerrado(): LeilaoBuilder
+    public function encerrado()
     {
         $this->encerrado = true;
         return $this;
     }
     
-    public function diasAtras(int $dias): LeilaoBuilder
+    public function diasAtras(int $dias)
     {
         $data = new DateTime();
         $data->sub(new DateInterval("P".$dias."D"));
@@ -64,7 +64,7 @@ class LeilaoBuilder {
         return this;
     }
     
-    public function constroi(): Leilao
+    public function constroi()
     {
         $leilao = new Leilao($this->nome, $this->valor, $this->dono, $this->usado);
         $leilao->setDataAbertura($dataAbertura);
