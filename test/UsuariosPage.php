@@ -14,7 +14,7 @@ class UsuariosPage
     
     public function visita()
     {
-        $this->pagina->url("");
+        $this->pagina->url("/usuarios");
     }
     
     public function novo()
@@ -24,7 +24,12 @@ class UsuariosPage
         // retorna a classe que representa a nova pagina
         return new NovoUsuarioPage($this->pagina);
     }
-    
+       
+    public function edita(){
+        $this->pagina->byLinkText("editar")->click();
+        
+        return new EditaUsuarioPage($this->pagina);
+    }
     public function remove()
     {
         $this->pagina->byTag("button")->click();

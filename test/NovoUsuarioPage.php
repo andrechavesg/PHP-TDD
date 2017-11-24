@@ -23,11 +23,13 @@ class NovoUsuarioPage
         $txtNome->submit();
     }
     
-    public function exibiuErroDoNome(){
+    public function exibiuErroDoNome()
+    {
         return strpos($this->pagina->source(),"Nome obrigatorio!") !== false;
     }
     
-    public function exibiuErroDoNomeEDoEmail(){
+    public function exibiuErroDoNomeEDoEmail()
+    {
         return strpos($this->pagina->source(),"Nome obrigatorio!") !== false &&
             strpos($this->pagina->source(),"E-mail obrigatorio!");
     }
