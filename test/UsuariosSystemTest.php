@@ -5,70 +5,48 @@ use PHPUnit_Extensions_Selenium2TestCase;
 
 class UsuariosSystemTest extends PHPUnit_Extensions_Selenium2TestCase
 {
+    private $usuarios;
+    
     /**
      * @before
      */
     protected function setUp()
     {
         $this->setBrowserUrl("http://localhost:8080/usuarios");
+        $this->usuarios = new UsuariosPage($this);
     }
     
     public function testDeveAdicionarUmUsuario()
     {
-        $this->url('/new');
-        $nome = $this->byName("usuario.nome");
-        $email = $this->byName("usuario.email");
+        $this->usuarios->visita();
+        $this->usuarios->novo()
+            ->cadastra("Ronaldo Luiz de Albuquerque", "ronaldo2009@terra.com.br");
         
-        $nome->value("Ronaldo Luiz de Albuquerque");
-        $email->value("ronaldo2009@terra.com.br");
-        
-        $email->submit();
-        
-        $achouNome = strpos($this->source(),"Ronaldo Luiz de Albuquerque") !== false;
-        $achouEmail = strpos($this->source(),"ronaldo2009@terra.com.br") !== false;
-        
-        $this->assertTrue($achouNome);
-        $this->assertTrue($achouEmail);
+        $this->assertTrue($this->usuarios->existeNaListagem(
+            "Ronaldo Luiz de Albuquerque", "ronaldo2009@terra.com.br"));
     }
     
     public function testNaoDeveAdicionarUmUsuarioSemNome()
     {
-        $this->url('/new');
-        $nome = $this->byName("usuario.nome");
-        $email = $this->byName("usuario.email");
+        $this->usuarios->visita();
+        $this->usuarios->novo()
+            ->cadastra("", "ronaldo2009@terra.com.br");
         
-        $nome->value("");
-        $email->value("ronaldo2009@terra.com.br");
-        
-        $email->submit();
-        
-        $exibiuErro = strpos($this->source(),"Nome obrigatorio!") !== false;
-        
-        $this->assertTrue($exibiuErro);
+        $this->assertTrue($this->pagina->exibiuErroDoNome());
     }
     
     public function testNaoDeveAdicionarUmUsuarioSemNomeOuSemEmail()
     {
-        $this->url('/new');
-        $nome = $this->byName("usuario.nome");
-        $email = $this->byName("usuario.email");
+        $this->usuarios->visita();
+        $this->usuarios->novo()
+           ->cadastra("", "");
         
-        $nome->value("");
-        $email->value("");
-        
-        $email->submit();
-        
-        $exibiuErroParaNome = strpos($this->source(),"Nome obrigatorio!") !== false;
-        $exibiuErroParaEmail = strpos($this->source(),"E-mail obrigatorio!") !== false;
-        
-        $this->assertTrue($exibiuErroParaNome);
-        $this->assertTrue($exibiuErroParaEmail);
+        $this->assertTrue($this->pagina->exibiuErroDoNomeEDoEmail());
     }
     
-    public function testDeveAbrirFormulario()
+    public function testDeveRemoverUmUsuario()
     {
-        $link = $this->byLinkText("Novo Usuário");
-        
-        $link->click();
+        $this->usuarios->visita();
+        $this->usuarios->remove();
     }
 }
