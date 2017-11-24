@@ -12,7 +12,9 @@ class LeiloesSystemTest extends PHPUnit_Extensions_Selenium2TestCase
      */
     protected function setUp()
     {
-        $this->setBrowserUrl("http://localhost:8080");
+        $url = new URLDaAplicacao();
+        
+        $this->setBrowserUrl($url->getUrlBase());
         
         $this->usuarios = new UsuariosPage($this);
         
@@ -28,8 +30,8 @@ class LeiloesSystemTest extends PHPUnit_Extensions_Selenium2TestCase
         
         $novoLeilao = $this->leiloes->novo();
         $novoLeilao->preenche("celular", 500, "Paulo Henrique", true);
-        
-        $this->assertTrue($this->leiloes->existe("Geladeira", 500, "Paulo Henrique", true));
+
+        $this->assertTrue($this->leiloes->existe("celular", 500, "Paulo Henrique", true));
     }
     
     public function testNaoDeveAdicionarSemNomeOuValorInicial()

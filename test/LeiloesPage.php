@@ -31,5 +31,13 @@ class LeiloesPage
         strpos($this->pagina->source(), strval($valor)) !== false &&
                 strpos($this->pagina->source(), $usado ? "Sim" : "Não") !== false;
     }
+    
+    public function detalhes($posicao) {
+        $elementos = $this->pagina->elements($this->pagina->using('link text')->value('exibir'));
+            
+        $elementos[$posicao-1]->click();
+        
+        return new DetalhesDoLeilaoPage($this->pagina);
+    }
 }
 

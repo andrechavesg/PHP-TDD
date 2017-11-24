@@ -12,7 +12,9 @@ class UsuariosSystemTest extends PHPUnit_Extensions_Selenium2TestCase
      */
     protected function setUp()
     {
-        $this->setBrowserUrl("http://localhost:8080");
+        $url = new URLDaAplicacao();
+        
+        $this->setBrowserUrl($url->getUrlBase());
         
         $this->usuarios = new UsuariosPage($this);
     }
